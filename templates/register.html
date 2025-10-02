@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>註冊</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="form-title">註冊</h1>
+
+    <div class="form-container">
+        <form id="registerForm" method="POST" action="/register">
+            <label>使用者名稱：
+                <input type="text" id="username" name="username" required>
+            </label>
+
+            <label>電子郵件 (Gmail)：
+                <input type="email" id="email" name="email" required>
+            </label>
+            <span id="emailMsg"></span>
+
+            <label>密碼：
+                <input type="password" id="password" name="password" required>
+            </label>
+
+            <label>確認密碼：
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </label>
+            <span id="passwordMsg"></span>
+
+            <button type="submit" id="registerBtn">註冊</button>
+        </form>
+
+        <p class="login-link">已有帳號？<a href="/login">去登入</a></p>
+    </div>
+
+    <script src="/static/index/register.js"></script>
+</body>
+</html>
