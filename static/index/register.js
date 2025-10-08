@@ -6,7 +6,6 @@ const passwordInput = document.getElementById('password');
 const confirmInput = document.getElementById('confirm_password');
 const passwordMsg = document.getElementById('passwordMsg');
 
-// ✅ 即時檢查 Gmail 格式 + 是否重複
 emailInput.addEventListener('input', async () => {
     const email = emailInput.value;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
@@ -36,7 +35,6 @@ emailInput.addEventListener('input', async () => {
     }
 });
 
-// ✅ 即時檢查兩次密碼是否一致
 function checkPasswordMatch() {
     if (passwordInput.value && confirmInput.value) {
         if (passwordInput.value !== confirmInput.value) {

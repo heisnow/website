@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>帳號驗證</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="form-title">輸入驗證碼</h1>
+
+    <div class="form-container">
+        <p>我們已寄送 6 位數驗證碼到 {{ email }}</p>
+        <form method="POST">
+            <label>驗證碼：
+                <input type="text" name="code" maxlength="6" required>
+            </label>
+            <button type="submit">送出</button>
+        </form>
+    </div>
+</body>
+</html>

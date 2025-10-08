@@ -1,0 +1,5 @@
+flask
+flask-bcrypt
+flask-mail
+python-dotenv
+gunicorn

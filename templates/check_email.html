@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>驗證信已寄出</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #f0f8ff;
+            font-family: sans-serif;
+        }
+        .envelope {
+            width: 150px;
+            height: 100px;
+            background: #ff6b6b;
+            position: relative;
+            animation: fly 2s infinite alternate;
+        }
+        .envelope::before, .envelope::after {
+            content: "";
+            position: absolute;
+            border: 75px solid transparent;
+            border-top: 50px solid #ff6b6b;
+            top: -50px;
+        }
+        .envelope::after {
+            border-top: 50px solid white;
+            top: 0;
+            left: 0;
+        }
+        @keyframes fly {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-20px);}
+        }
+        .text {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            margin-top: 30px;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="envelope"></div>
+    <div class="text">
+        <h2>驗證信已寄出！</h2>
+        <p>我們已將驗證信寄到 <strong>{{ email }}</strong></p>
+        <p>請打開你的 Gmail 收件匣點擊驗證連結完成註冊。</p>
+    </div>
+    <a href="https://mail.google.com" class="btn" target="_blank">前往 Gmail</a>
+</body>
+</html>
